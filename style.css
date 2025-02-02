@@ -1,0 +1,171 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: #1d1d1d;
+}
+
+#canvas {
+    border: 1px solid black;
+}
+
+#myCanvas1{
+    display: none;
+}
+
+.outputdiv{
+    height: auto !important;
+}
+
+nav{
+    height: 60px;
+    background: #FFFFFF; /* Changed from rgb(250, 255, 114) to #FFFFFF */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100vw; */
+    min-height: calc(100vh - 60px);
+    margin: 5% 0;
+}
+
+.box{
+    background: #FFFFFF; /* Changed from rgb(250, 255, 114) to #FFFFFF */
+    width: 70%;
+    height: 70%;
+    border-radius: 12px;
+    box-shadow: rgb(236 210 60 / 16%) 0px 3px 6px, rgb(226 246 60 / 54%) 0px 3px 6px; /* You can also change this if desired */
+}
+
+.firstrow{
+    margin: 1% 5%;
+}
+
+.secoundrow,
+.thirdrow{
+    display: flex;
+    margin: 1% 5%;
+    justify-content: space-between;
+}
+
+.imagerow{
+    display: flex;
+    margin: 1% 5%;
+    justify-content: space-between;
+}
+
+.imagerow div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #e8e8e8;
+    background-color: #212121;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 8px;
+    width: 45%;
+    height: fit-content;
+}
+
+.imagerow div canvas{
+    width: 100%;
+}
+
+.buttonsdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.buttonsdiv button{
+    border: 2px solid #e8e8e8;
+    background-color: #212121;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 8px;
+    box-shadow: 0px 48px 35px -48px #e8e8e8;
+    cursor: pointer;
+}
+
+#messageInput{
+    border: 2px solid #e8e8e8;
+    background-color: #212121;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 48px 35px -48px #e8e8e8;
+    width: 70%;
+}
+
+.custum-file-upload {
+    width: calc(100% - 3rem);
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    gap: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #e8e8e8;
+    background-color: #212121;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 48px 35px -48px #e8e8e8;
+}
+
+.custum-file-upload .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custum-file-upload .icon svg {
+    height: 20px;
+    fill: #e8e8e8;
+}
+
+.custum-file-upload .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custum-file-upload .text span {
+    font-weight: 400;
+    color: #e8e8e8;
+}
+
+.custum-file-upload input {
+    display: none;
+}
+
+@media screen and (max-width: 590px) {
+    .secoundrow{
+      flex-direction: column;
+    }
+
+    #messageInput{
+        width: calc(100% - 3rem);
+    }
+
+    .buttonsdiv{
+        width: auto;
+    }
+    .buttonsdiv button{
+        margin-top: 2%;
+    }
+
+    .box{
+        width: 90%;
+    }
+}
